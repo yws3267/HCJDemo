@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>미디어 - HCJDemo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">HCJDemo</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="list.html">List</a></li>
+        <li><a href="timetable.html">시간표</a></li>
+        <li><a href="media.html" class="active">미디어</a></li>
+        <li><a href="register.html">회원가입</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h2>🎵 미디어 페이지</h2>
+    <p>W3Schools 기반 — audio, video 태그를 활용한 미디어 페이지</p>
+  </div>
+
+  <div class="page-content">
+
+    <!-- audio 기본 예제 -->
+    <div class="section-box">
+      <h3>① audio 태그 — 기본 사용 (controls)</h3>
+      <p style="color:#64748b; font-size:0.9rem; margin-bottom:0.75rem;">
+        <code>controls</code> 속성을 사용하여 재생 컨트롤러를 표시합니다.
+      </p>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        브라우저가 audio 태그를 지원하지 않습니다.
+      </audio>
+      <p class="media-note">※ W3Schools 제공 예제 오디오 파일 (horse.ogg / horse.mp3)을 사용합니다.</p>
+    </div>
+
+    <!-- audio autoplay + muted -->
+    <div class="section-box">
+      <h3>② audio 태그 — autoplay + muted 속성</h3>
+      <p style="color:#64748b; font-size:0.9rem; margin-bottom:0.75rem;">
+        <code>autoplay</code>는 페이지 로드 시 자동 재생, <code>muted</code>는 음소거 상태로 시작합니다.
+        (브라우저 정책상 muted 없이 autoplay는 차단될 수 있습니다.)
+      </p>
+      <audio controls muted autoplay>
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        브라우저가 audio 태그를 지원하지 않습니다.
+      </audio>
+    </div>
+
+    <!-- audio loop -->
+    <div class="section-box">
+      <h3>③ audio 태그 — loop 속성</h3>
+      <p style="color:#64748b; font-size:0.9rem; margin-bottom:0.75rem;">
+        <code>loop</code> 속성을 사용하면 오디오가 끝난 후 처음부터 반복 재생됩니다.
+      </p>
+      <audio controls loop>
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        브라우저가 audio 태그를 지원하지 않습니다.
+      </audio>
+    </div>
+
+    <!-- video 기본 예제 -->
+    <div class="section-box">
+      <h3>④ video 태그 — 기본 사용 (controls)</h3>
+      <p style="color:#64748b; font-size:0.9rem; margin-bottom:0.75rem;">
+        <code>controls</code> 속성으로 재생, 일시정지, 볼륨 등 컨트롤러를 표시합니다.
+      </p>
+      <video controls width="100%" style="max-width:640px; display:block; border-radius:8px;">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+        브라우저가 video 태그를 지원하지 않습니다.
+      </video>
+      <p class="media-note">※ W3Schools 제공 예제 동영상 파일 (mov_bbb.mp4)을 사용합니다.</p>
+    </div>
+
+    <!-- video width/height 설정 -->
+    <div class="section-box">
+      <h3>⑤ video 태그 — width, height, autoplay, muted</h3>
+      <p style="color:#64748b; font-size:0.9rem; margin-bottom:0.75rem;">
+        <code>width</code>, <code>height</code>로 크기를 지정하고, <code>autoplay</code>와 <code>muted</code>를 함께 사용합니다.
+      </p>
+      <video width="320" height="240" controls muted autoplay style="border-radius:8px;">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+        브라우저가 video 태그를 지원하지 않습니다.
+      </video>
+    </div>
+
+    <!-- video poster -->
+    <div class="section-box">
+      <h3>⑥ video 태그 — poster 속성 (썸네일 이미지)</h3>
+      <p style="color:#64748b; font-size:0.9rem; margin-bottom:0.75rem;">
+        <code>poster</code> 속성으로 동영상 재생 전 표시될 썸네일 이미지를 지정합니다.
+      </p>
+      <video controls poster="https://www.w3schools.com/images/w3html5.gif" width="100%" style="max-width:640px; display:block; border-radius:8px;">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+        브라우저가 video 태그를 지원하지 않습니다.
+      </video>
+    </div>
+
+    <!-- YouTube 삽입 (iframe) -->
+    <div class="section-box">
+      <h3>⑦ YouTube 동영상 삽입 — iframe 태그</h3>
+      <p style="color:#64748b; font-size:0.9rem; margin-bottom:0.75rem;">
+        <code>&lt;iframe&gt;</code> 태그를 사용하여 YouTube 영상을 페이지에 삽입할 수 있습니다.
+      </p>
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px;">
+        <iframe
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:8px;"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="media-note">※ YouTube embed URL 형식: https://www.youtube.com/embed/[영상ID]</p>
+    </div>
+
+    <!-- 속성 정리 표 -->
+    <div class="section-box">
+      <h3>⑧ audio / video 주요 속성 정리</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>속성</th>
+            <th>설명</th>
+            <th>audio</th>
+            <th>video</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>controls</code></td>
+            <td>재생 컨트롤러 표시</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td><code>autoplay</code></td>
+            <td>자동 재생 (muted 권장)</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td><code>muted</code></td>
+            <td>음소거 상태로 시작</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td><code>loop</code></td>
+            <td>반복 재생</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td><code>poster</code></td>
+            <td>재생 전 썸네일 이미지</td>
+            <td>❌</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td><code>width / height</code></td>
+            <td>크기 지정</td>
+            <td>❌</td>
+            <td>✅</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 HCJDemo. W3Schools 예제 기반 학습 프로젝트.</p>
+  </footer>
+
+</body>
+</html>
