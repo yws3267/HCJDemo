@@ -11,23 +11,30 @@
         border-collapse: collapse;
         width: 100%;
         margin-top: 10px;
-        margin-bottom: 30px;
       }
       th, td {
-        border: 1px solid #ccc;
-        padding: 10px 14px;
+        border: 1px solid #bbb;
+        padding: 8px 12px;
         text-align: center;
       }
       th {
         background-color: #333;
         color: white;
       }
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
+      td.period {
+        background-color: #f0f0f0;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+      td.lunch {
+        color: gray;
+        font-style: italic;
+        background-color: #fafafa;
       }
       td.subject {
         background-color: #d6eaf8;
         font-weight: bold;
+        vertical-align: middle;
       }
     </style>
   </head>
@@ -39,10 +46,10 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="list.html">목록</a></li>
-          <li><a href="timetable.html">시간표</a></li>
-          <li><a href="media.html">미디어</a></li>
-          <li><a href="register.html">회원가입</a></li>
+          <li><a href="list.html">List</a></li>
+          <li><a href="timetable.html">Timetable</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="register.html">Register</a></li>
         </ul>
       </div>
     </nav>
@@ -53,78 +60,110 @@
         <p>2026년 1학기 강의 시간표입니다.</p>
         <hr />
 
-        <h2>주간 시간표</h2>
         <table>
           <thead>
             <tr>
+              <th>교시</th>
               <th>시간</th>
-              <th>월</th>
-              <th>화</th>
-              <th>수</th>
-              <th>목</th>
-              <th>금</th>
+              <th>월 (Mon)</th>
+              <th>화 (Tue)</th>
+              <th>수 (Wed)</th>
+              <th>목 (Thu)</th>
+              <th>금 (Fri)</th>
+              <th>토 (Sat)</th>
+              <th>일 (Sun)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>9:00 ~ 10:30</td>
-              <td class="subject">웹프로그래밍<br /><small>(A강의실)</small></td>
+              <td class="period">1교시</td>
+              <td class="period">9:10 ~ 10:00</td>
               <td></td>
-              <td class="subject">웹프로그래밍<br /><small>(A강의실)</small></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="period">2교시</td>
+              <td class="period">10:10 ~ 11:00</td>
+              <td></td>
+              <td class="subject" rowspan="3">웹 프로그래밍<br /><small>이병천 교수</small></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
             </tr>
             <tr>
-              <td>10:30 ~ 12:00</td>
+              <td class="period">3교시</td>
+              <td class="period">11:10 ~ 12:00</td>
               <td></td>
-              <td class="subject">데이터베이스<br /><small>(B강의실)</small></td>
               <td></td>
-              <td class="subject">데이터베이스<br /><small>(B강의실)</small></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
             </tr>
             <tr>
-              <td>12:00 ~ 13:00</td>
-              <td colspan="5" style="color: gray;">점심시간</td>
-            </tr>
-            <tr>
-              <td>13:00 ~ 14:30</td>
-              <td class="subject">보안프로토콜<br /><small>(C강의실)</small></td>
+              <td class="period">4교시</td>
+              <td class="period">12:10 ~ 13:00</td>
               <td></td>
               <td></td>
-              <td class="subject">보안프로토콜<br /><small>(C강의실)</small></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td></td>
             </tr>
-          </tbody>
-        </table>
-
-        <h2>수강 과목 목록</h2>
-        <table>
-          <thead>
             <tr>
-              <th>과목명</th>
-              <th>담당 교수</th>
-              <th>강의실</th>
-              <th>학점</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>웹프로그래밍</td>
-              <td>홍길동 교수</td>
-              <td>A강의실</td>
-              <td>3학점</td>
+              <td class="period">-</td>
+              <td class="period">13:00 ~ 14:00</td>
+              <td class="lunch" colspan="7">점심시간</td>
             </tr>
             <tr>
-              <td>데이터베이스</td>
-              <td>김철수 교수</td>
-              <td>B강의실</td>
-              <td>3학점</td>
+              <td class="period">5교시</td>
+              <td class="period">14:10 ~ 15:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <td>보안프로토콜</td>
-              <td>이영희 교수</td>
-              <td>C강의실</td>
-              <td>3학점</td>
+              <td class="period">6교시</td>
+              <td class="period">15:10 ~ 16:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="period">7교시</td>
+              <td class="period">16:10 ~ 17:00</td>
+              <td class="subject" rowspan="2">웹 프로그래밍<br /><small>이병천 교수</small></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="period">8교시</td>
+              <td class="period">17:10 ~ 18:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>
