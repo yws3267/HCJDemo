@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>목록 - 웹프로그래밍 데모</title>
+    <title>웹프로그래밍 데모</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -12,13 +12,13 @@
       <div class="container">
         <div class="logo">WebDemo</div>
         <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/list">목록</a></li>
-          <li><a href="/timetable">시간표</a></li>
-          <li><a href="/media">미디어</a></li>
-          <li><a href="/register">회원가입</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="list.html">목록</a></li>
+          <li><a href="timetable.html">시간표</a></li>
+          <li><a href="media.html">미디어</a></li>
+          <li><a href="register.html">회원가입</a></li>
         </ul>
       </div>
     </nav>
@@ -30,18 +30,18 @@
 
         <h2>순서 없는 목록 (ul)</h2>
         <h3>좋아하는 프로그래밍 언어</h3>
-        <ul>
+        <ul style="list-style-type: disc; padding-left: 30px;">
           <li>HTML5</li>
           <li>CSS3</li>
           <li>JavaScript</li>
         </ul>
 
         <h3>웹 개발 도구</h3>
-        <ul>
+        <ul style="list-style-type: circle; padding-left: 30px;">
           <li>VS Code</li>
           <li>
             브라우저
-            <ul>
+            <ul style="list-style-type: square; padding-left: 30px;">
               <li>Chrome</li>
               <li>Firefox</li>
             </ul>
@@ -53,7 +53,7 @@
 
         <h2>순서 있는 목록 (ol)</h2>
         <h3>웹 페이지 만드는 순서</h3>
-        <ol>
+        <ol style="padding-left: 30px;">
           <li>HTML로 구조 작성</li>
           <li>CSS로 스타일 적용</li>
           <li>JavaScript로 기능 추가</li>
@@ -62,17 +62,17 @@
         <hr />
 
         <h2>정의 목록 (dl)</h2>
-        <dl>
+        <dl style="padding-left: 10px;">
           <dt><strong>HTML</strong></dt>
-          <dd>웹 페이지의 구조를 정의하는 마크업 언어</dd>
-
+          <dd style="margin-left: 20px;">웹 페이지의 구조를 정의하는 마크업 언어</dd>
           <dt><strong>CSS</strong></dt>
-          <dd>웹 페이지의 스타일(색상, 레이아웃 등)을 담당하는 언어</dd>
-
+          <dd style="margin-left: 20px;">웹 페이지의 스타일(색상, 레이아웃 등)을 담당하는 언어</dd>
           <dt><strong>JavaScript</strong></dt>
-          <dd>웹 페이지에 동적인 기능을 추가하는 프로그래밍 언어</dd>
+          <dd style="margin-left: 20px;">웹 페이지에 동적인 기능을 추가하는 프로그래밍 언어</dd>
         </dl>
       </div>
     </section>
+
+    <script src="main.js"></script>
   </body>
 </html>

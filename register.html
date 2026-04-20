@@ -4,51 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>회원가입 - 웹프로그래밍 데모</title>
+    <title>웹프로그래밍 데모</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       .form-box {
-        max-width: 500px;
-        margin: 20px 0;
-        padding: 24px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+        max-width: 480px;
+        margin: 10px 0;
+        padding: 20px 24px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
         background-color: #fafafa;
       }
       .form-group {
-        margin-bottom: 16px;
+        margin-bottom: 14px;
       }
       .form-group label {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 4px;
         font-weight: bold;
       }
-      .form-group input,
+      .form-group input[type="text"],
+      .form-group input[type="password"],
+      .form-group input[type="email"],
+      .form-group input[type="date"],
       .form-group select,
       .form-group textarea {
         width: 100%;
-        padding: 8px 10px;
-        border: 1px solid #ccc;
+        padding: 7px 10px;
+        border: 1px solid #bbb;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 15px;
         box-sizing: border-box;
       }
       .form-group input[type="radio"],
       .form-group input[type="checkbox"] {
-        width: auto;
-        margin-right: 6px;
+        margin-right: 5px;
       }
-      .submit-btn {
-        padding: 10px 30px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        font-size: 15px;
-        cursor: pointer;
-      }
-      .submit-btn:hover {
-        background-color: #2980b9;
+      .inline-label {
+        font-weight: normal;
+        margin-right: 14px;
       }
     </style>
   </head>
@@ -57,13 +51,13 @@
       <div class="container">
         <div class="logo">WebDemo</div>
         <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/list">목록</a></li>
-          <li><a href="/timetable">시간표</a></li>
-          <li><a href="/media">미디어</a></li>
-          <li><a href="/register">회원가입</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="list.html">목록</a></li>
+          <li><a href="timetable.html">시간표</a></li>
+          <li><a href="media.html">미디어</a></li>
+          <li><a href="register.html">회원가입</a></li>
         </ul>
       </div>
     </nav>
@@ -100,10 +94,9 @@
             <div class="form-group">
               <label>성별</label><br />
               <input type="radio" name="gender" value="male" id="male" />
-              <label for="male" style="display:inline; font-weight:normal;">남성</label>
-              &nbsp;
+              <label for="male" class="inline-label">남성</label>
               <input type="radio" name="gender" value="female" id="female" />
-              <label for="female" style="display:inline; font-weight:normal;">여성</label>
+              <label for="female" class="inline-label">여성</label>
             </div>
 
             <div class="form-group">
@@ -112,20 +105,18 @@
                 <option value="">-- 선택하세요 --</option>
                 <option value="cs">컴퓨터공학</option>
                 <option value="sw">소프트웨어학</option>
-                <option value="sec">정보보안학</option>
+                <option value="sec">정보보호학</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label>관심 분야 (중복 선택 가능)</label><br />
+              <label>관심 분야</label><br />
               <input type="checkbox" name="interest" value="web" id="web" />
-              <label for="web" style="display:inline; font-weight:normal;">웹 개발</label>
-              &nbsp;
+              <label for="web" class="inline-label">웹 개발</label>
               <input type="checkbox" name="interest" value="sec" id="sec" />
-              <label for="sec" style="display:inline; font-weight:normal;">보안</label>
-              &nbsp;
+              <label for="sec" class="inline-label">보안</label>
               <input type="checkbox" name="interest" value="ai" id="ai" />
-              <label for="ai" style="display:inline; font-weight:normal;">인공지능</label>
+              <label for="ai" class="inline-label">인공지능</label>
             </div>
 
             <div class="form-group">
@@ -133,13 +124,14 @@
               <textarea id="intro" name="intro" rows="3" placeholder="간단한 자기소개를 입력하세요"></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">가입하기</button>
-            &nbsp;
-            <button type="reset" class="submit-btn" style="background-color:#aaa;">초기화</button>
+            <button type="submit">가입하기</button>
+            <button type="reset">초기화</button>
 
           </form>
         </div>
       </div>
     </section>
+
+    <script src="main.js"></script>
   </body>
 </html>

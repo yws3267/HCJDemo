@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>강의시간표 - 웹프로그래밍 데모</title>
+    <title>웹프로그래밍 데모</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       table {
         border-collapse: collapse;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 30px;
       }
       th, td {
         border: 1px solid #ccc;
@@ -18,7 +19,7 @@
         text-align: center;
       }
       th {
-        background-color: #3498db;
+        background-color: #333;
         color: white;
       }
       tr:nth-child(even) {
@@ -35,13 +36,13 @@
       <div class="container">
         <div class="logo">WebDemo</div>
         <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/list">목록</a></li>
-          <li><a href="/timetable">시간표</a></li>
-          <li><a href="/media">미디어</a></li>
-          <li><a href="/register">회원가입</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="list.html">목록</a></li>
+          <li><a href="timetable.html">시간표</a></li>
+          <li><a href="media.html">미디어</a></li>
+          <li><a href="register.html">회원가입</a></li>
         </ul>
       </div>
     </nav>
@@ -52,6 +53,7 @@
         <p>2026년 1학기 강의 시간표입니다.</p>
         <hr />
 
+        <h2>주간 시간표</h2>
         <table>
           <thead>
             <tr>
@@ -65,7 +67,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>9:00 ~ 10:00</td>
+              <td>9:00 ~ 10:30</td>
               <td class="subject">웹프로그래밍<br /><small>(A강의실)</small></td>
               <td></td>
               <td class="subject">웹프로그래밍<br /><small>(A강의실)</small></td>
@@ -73,46 +75,29 @@
               <td></td>
             </tr>
             <tr>
-              <td>10:00 ~ 11:00</td>
+              <td>10:30 ~ 12:00</td>
               <td></td>
               <td class="subject">데이터베이스<br /><small>(B강의실)</small></td>
               <td></td>
               <td class="subject">데이터베이스<br /><small>(B강의실)</small></td>
               <td></td>
-            </tr>
-            <tr>
-              <td>11:00 ~ 12:00</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="subject">운영체제<br /><small>(C강의실)</small></td>
             </tr>
             <tr>
               <td>12:00 ~ 13:00</td>
               <td colspan="5" style="color: gray;">점심시간</td>
             </tr>
             <tr>
-              <td>13:00 ~ 14:00</td>
-              <td class="subject">보안프로토콜<br /><small>(D강의실)</small></td>
+              <td>13:00 ~ 14:30</td>
+              <td class="subject">보안프로토콜<br /><small>(C강의실)</small></td>
               <td></td>
               <td></td>
-              <td class="subject">보안프로토콜<br /><small>(D강의실)</small></td>
+              <td class="subject">보안프로토콜<br /><small>(C강의실)</small></td>
               <td></td>
-            </tr>
-            <tr>
-              <td>14:00 ~ 15:00</td>
-              <td></td>
-              <td class="subject">알고리즘<br /><small>(E강의실)</small></td>
-              <td></td>
-              <td></td>
-              <td class="subject">알고리즘<br /><small>(E강의실)</small></td>
             </tr>
           </tbody>
         </table>
 
-        <br />
-        <h3>강의 목록</h3>
+        <h2>수강 과목 목록</h2>
         <table>
           <thead>
             <tr>
@@ -138,12 +123,14 @@
             <tr>
               <td>보안프로토콜</td>
               <td>이영희 교수</td>
-              <td>D강의실</td>
+              <td>C강의실</td>
               <td>3학점</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
+
+    <script src="main.js"></script>
   </body>
 </html>

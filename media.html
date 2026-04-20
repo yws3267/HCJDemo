@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>미디어 - 웹프로그래밍 데모</title>
+    <title>웹프로그래밍 데모</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      .media-section {
-        margin: 24px 0;
-        padding: 16px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+      .media-box {
+        margin: 10px 0 20px 0;
+        padding: 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
         background-color: #fafafa;
+        display: inline-block;
       }
       audio, video {
         display: block;
-        margin-top: 10px;
+        margin-top: 8px;
       }
     </style>
   </head>
@@ -25,13 +26,13 @@
       <div class="container">
         <div class="logo">WebDemo</div>
         <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/list">목록</a></li>
-          <li><a href="/timetable">시간표</a></li>
-          <li><a href="/media">미디어</a></li>
-          <li><a href="/register">회원가입</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="list.html">목록</a></li>
+          <li><a href="timetable.html">시간표</a></li>
+          <li><a href="media.html">미디어</a></li>
+          <li><a href="register.html">회원가입</a></li>
         </ul>
       </div>
     </nav>
@@ -39,23 +40,23 @@
     <section class="main">
       <div class="container">
         <h1>미디어 (Media)</h1>
-        <p>HTML5의 audio, video 태그를 이용한 미디어 페이지입니다.</p>
+        <p>HTML5 audio, video 태그 예제입니다.</p>
         <hr />
 
-        <h2>🎵 음악 (Audio)</h2>
+        <h2>🎵 오디오 (Audio)</h2>
 
-        <div class="media-section">
-          <h3>샘플 오디오 1 - Horse Sound</h3>
-          <p>말이 우는 소리 샘플 오디오입니다.</p>
+        <div class="media-box">
+          <p><strong>샘플 오디오 1</strong> - 말 울음소리 (MP3)</p>
           <audio controls>
             <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
             이 브라우저는 audio 태그를 지원하지 않습니다.
           </audio>
         </div>
 
-        <div class="media-section">
-          <h3>샘플 오디오 2 - Horse Sound (OGG)</h3>
-          <p>동일한 오디오의 OGG 포맷 버전입니다.</p>
+        <br />
+
+        <div class="media-box">
+          <p><strong>샘플 오디오 2</strong> - 말 울음소리 (OGG, MP3 순서 지정)</p>
           <audio controls>
             <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
             <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
@@ -67,9 +68,8 @@
 
         <h2>🎬 동영상 (Video)</h2>
 
-        <div class="media-section">
-          <h3>샘플 동영상 1 - Big Buck Bunny</h3>
-          <p>W3Schools 샘플 동영상입니다.</p>
+        <div class="media-box">
+          <p><strong>샘플 동영상 1</strong> - Big Buck Bunny (MP4)</p>
           <video width="400" controls>
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
             <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
@@ -77,9 +77,10 @@
           </video>
         </div>
 
-        <div class="media-section">
-          <h3>샘플 동영상 2 - 자동재생 + 음소거</h3>
-          <p>autoplay와 muted 속성을 적용한 동영상입니다.</p>
+        <br />
+
+        <div class="media-box">
+          <p><strong>샘플 동영상 2</strong> - autoplay + muted + loop 속성 적용</p>
           <video width="400" autoplay muted loop controls>
             <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4" />
             이 브라우저는 video 태그를 지원하지 않습니다.
@@ -87,5 +88,7 @@
         </div>
       </div>
     </section>
+
+    <script src="main.js"></script>
   </body>
 </html>
