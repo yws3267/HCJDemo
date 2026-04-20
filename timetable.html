@@ -1,240 +1,149 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>강의 시간표 - HCJDemo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <header>
-    <div class="logo">HCJDemo</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="list.html">List</a></li>
-        <li><a href="timetable.html" class="active">시간표</a></li>
-        <li><a href="media.html">미디어</a></li>
-        <li><a href="register.html">회원가입</a></li>
-      </ul>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강의시간표 - 웹프로그래밍 데모</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px 14px;
+        text-align: center;
+      }
+      th {
+        background-color: #3498db;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      td.subject {
+        background-color: #d6eaf8;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/list">목록</a></li>
+          <li><a href="/timetable">시간표</a></li>
+          <li><a href="/media">미디어</a></li>
+          <li><a href="/register">회원가입</a></li>
+        </ul>
+      </div>
     </nav>
-  </header>
 
-  <div class="page-header">
-    <h2>📅 강의 시간표</h2>
-    <p>W3Schools 기반 — table 태그를 활용한 주간 강의 시간표</p>
-  </div>
+    <section class="main">
+      <div class="container">
+        <h1>강의 시간표</h1>
+        <p>2026년 1학기 강의 시간표입니다.</p>
+        <hr />
 
-  <div class="page-content">
-
-    <!-- 학과 정보 -->
-    <div class="section-box">
-      <h3>학과 정보</h3>
-      <table>
-        <tr>
-          <th>학과</th>
-          <td>컴퓨터공학과</td>
-          <th>학년 / 학기</th>
-          <td>2학년 1학기</td>
-        </tr>
-        <tr>
-          <th>학번</th>
-          <td>20240001</td>
-          <th>이름</th>
-          <td>홍길동</td>
-        </tr>
-      </table>
-    </div>
-
-    <!-- 주간 시간표 -->
-    <div class="section-box">
-      <h3>주간 강의 시간표</h3>
-      <div class="timetable-wrap">
         <table>
           <thead>
             <tr>
-              <th>교시</th>
               <th>시간</th>
-              <th>월요일</th>
-              <th>화요일</th>
-              <th>수요일</th>
-              <th>목요일</th>
-              <th>금요일</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>1교시</strong></td>
-              <td>09:00~09:50</td>
-              <td class="subject">웹프로그래밍<br><small>B101</small></td>
-              <td class="empty">-</td>
-              <td class="subject">웹프로그래밍<br><small>B101</small></td>
-              <td class="empty">-</td>
-              <td class="subject">자료구조<br><small>A201</small></td>
+              <td>9:00 ~ 10:00</td>
+              <td class="subject">웹프로그래밍<br /><small>(A강의실)</small></td>
+              <td></td>
+              <td class="subject">웹프로그래밍<br /><small>(A강의실)</small></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <td><strong>2교시</strong></td>
-              <td>10:00~10:50</td>
-              <td class="subject">웹프로그래밍<br><small>B101</small></td>
-              <td class="subject">데이터베이스<br><small>C302</small></td>
-              <td class="subject">웹프로그래밍<br><small>B101</small></td>
-              <td class="subject">알고리즘<br><small>A305</small></td>
-              <td class="subject">자료구조<br><small>A201</small></td>
+              <td>10:00 ~ 11:00</td>
+              <td></td>
+              <td class="subject">데이터베이스<br /><small>(B강의실)</small></td>
+              <td></td>
+              <td class="subject">데이터베이스<br /><small>(B강의실)</small></td>
+              <td></td>
             </tr>
             <tr>
-              <td><strong>3교시</strong></td>
-              <td>11:00~11:50</td>
-              <td class="empty">-</td>
-              <td class="subject">데이터베이스<br><small>C302</small></td>
-              <td class="empty">-</td>
-              <td class="subject">알고리즘<br><small>A305</small></td>
-              <td class="empty">-</td>
+              <td>11:00 ~ 12:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="subject">운영체제<br /><small>(C강의실)</small></td>
             </tr>
             <tr>
-              <td colspan="7" class="lunch">🍱 점심시간 12:00 ~ 13:00</td>
+              <td>12:00 ~ 13:00</td>
+              <td colspan="5" style="color: gray;">점심시간</td>
             </tr>
             <tr>
-              <td><strong>4교시</strong></td>
-              <td>13:00~13:50</td>
-              <td class="subject">운영체제<br><small>B205</small></td>
-              <td class="empty">-</td>
-              <td class="subject">운영체제<br><small>B205</small></td>
-              <td class="subject">네트워크<br><small>D101</small></td>
-              <td class="empty">-</td>
+              <td>13:00 ~ 14:00</td>
+              <td class="subject">보안프로토콜<br /><small>(D강의실)</small></td>
+              <td></td>
+              <td></td>
+              <td class="subject">보안프로토콜<br /><small>(D강의실)</small></td>
+              <td></td>
             </tr>
             <tr>
-              <td><strong>5교시</strong></td>
-              <td>14:00~14:50</td>
-              <td class="subject">운영체제<br><small>B205</small></td>
-              <td class="subject">소프트웨어공학<br><small>A102</small></td>
-              <td class="empty">-</td>
-              <td class="subject">네트워크<br><small>D101</small></td>
-              <td class="subject">캡스톤디자인<br><small>실습실1</small></td>
+              <td>14:00 ~ 15:00</td>
+              <td></td>
+              <td class="subject">알고리즘<br /><small>(E강의실)</small></td>
+              <td></td>
+              <td></td>
+              <td class="subject">알고리즘<br /><small>(E강의실)</small></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+        <h3>강의 목록</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>과목명</th>
+              <th>담당 교수</th>
+              <th>강의실</th>
+              <th>학점</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>웹프로그래밍</td>
+              <td>홍길동 교수</td>
+              <td>A강의실</td>
+              <td>3학점</td>
             </tr>
             <tr>
-              <td><strong>6교시</strong></td>
-              <td>15:00~15:50</td>
-              <td class="empty">-</td>
-              <td class="subject">소프트웨어공학<br><small>A102</small></td>
-              <td class="empty">-</td>
-              <td class="empty">-</td>
-              <td class="subject">캡스톤디자인<br><small>실습실1</small></td>
+              <td>데이터베이스</td>
+              <td>김철수 교수</td>
+              <td>B강의실</td>
+              <td>3학점</td>
             </tr>
             <tr>
-              <td><strong>7교시</strong></td>
-              <td>16:00~16:50</td>
-              <td class="empty">-</td>
-              <td class="empty">-</td>
-              <td class="subject">인공지능개론<br><small>E201</small></td>
-              <td class="empty">-</td>
-              <td class="subject">캡스톤디자인<br><small>실습실1</small></td>
-            </tr>
-            <tr>
-              <td><strong>8교시</strong></td>
-              <td>17:00~17:50</td>
-              <td class="empty">-</td>
-              <td class="empty">-</td>
-              <td class="subject">인공지능개론<br><small>E201</small></td>
-              <td class="empty">-</td>
-              <td class="empty">-</td>
+              <td>보안프로토콜</td>
+              <td>이영희 교수</td>
+              <td>D강의실</td>
+              <td>3학점</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
-
-    <!-- 과목별 상세 정보 -->
-    <div class="section-box">
-      <h3>과목별 상세 정보</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>과목명</th>
-            <th>담당 교수</th>
-            <th>학점</th>
-            <th>강의실</th>
-            <th>평가 방식</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="subject">웹프로그래밍</td>
-            <td>김웹프 교수</td>
-            <td>3학점</td>
-            <td>B101</td>
-            <td>중간 30% / 기말 40% / 과제 30%</td>
-          </tr>
-          <tr>
-            <td class="subject">데이터베이스</td>
-            <td>이데이터 교수</td>
-            <td>3학점</td>
-            <td>C302</td>
-            <td>중간 35% / 기말 45% / 출석 20%</td>
-          </tr>
-          <tr>
-            <td class="subject">알고리즘</td>
-            <td>박알고 교수</td>
-            <td>3학점</td>
-            <td>A305</td>
-            <td>중간 30% / 기말 50% / 과제 20%</td>
-          </tr>
-          <tr>
-            <td class="subject">운영체제</td>
-            <td>최운영 교수</td>
-            <td>3학점</td>
-            <td>B205</td>
-            <td>중간 40% / 기말 40% / 출석 20%</td>
-          </tr>
-          <tr>
-            <td class="subject">소프트웨어공학</td>
-            <td>정소공 교수</td>
-            <td>2학점</td>
-            <td>A102</td>
-            <td>중간 30% / 기말 30% / 팀프 40%</td>
-          </tr>
-          <tr>
-            <td class="subject">자료구조</td>
-            <td>강자료 교수</td>
-            <td>3학점</td>
-            <td>A201</td>
-            <td>중간 35% / 기말 45% / 과제 20%</td>
-          </tr>
-          <tr>
-            <td class="subject">네트워크</td>
-            <td>윤네트 교수</td>
-            <td>3학점</td>
-            <td>D101</td>
-            <td>중간 30% / 기말 50% / 출석 20%</td>
-          </tr>
-          <tr>
-            <td class="subject">인공지능개론</td>
-            <td>장인공 교수</td>
-            <td>3학점</td>
-            <td>E201</td>
-            <td>중간 30% / 기말 40% / 프로젝트 30%</td>
-          </tr>
-          <tr>
-            <td class="subject">캡스톤디자인</td>
-            <td>한캡스 교수</td>
-            <td>3학점</td>
-            <td>실습실1</td>
-            <td>발표 50% / 보고서 30% / 출석 20%</td>
-          </tr>
-          <tr>
-            <td style="font-weight:700;">합계</td>
-            <td colspan="2" style="font-weight:700; color:#2563eb;">총 26학점</td>
-            <td colspan="2"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
-  <footer>
-    <p>&copy; 2025 HCJDemo. W3Schools 예제 기반 학습 프로젝트.</p>
-  </footer>
-
-</body>
+    </section>
+  </body>
 </html>

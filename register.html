@@ -1,224 +1,145 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>회원가입 - HCJDemo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <header>
-    <div class="logo">HCJDemo</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="list.html">List</a></li>
-        <li><a href="timetable.html">시간표</a></li>
-        <li><a href="media.html">미디어</a></li>
-        <li><a href="register.html" class="active">회원가입</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="page-header">
-    <h2>📝 사용자 등록</h2>
-    <p>W3Schools 기반 — 입력 양식(form)을 활용한 회원가입 페이지</p>
-  </div>
-
-  <div class="page-content">
-
-    <div class="section-box">
-      <h3>회원가입 양식</h3>
-
-      <form action="#" method="post" onsubmit="handleSubmit(event)">
-
-        <!-- 기본 정보 -->
-        <fieldset>
-          <legend>기본 정보</legend>
-
-          <div class="form-group">
-            <label for="username">아이디 *</label>
-            <input type="text" id="username" name="username"
-                   placeholder="영문, 숫자 4~16자" required minlength="4" maxlength="16">
-          </div>
-
-          <div class="form-group">
-            <label for="password">비밀번호 *</label>
-            <input type="password" id="password" name="password"
-                   placeholder="영문+숫자+특수문자 8자 이상" required minlength="8">
-          </div>
-
-          <div class="form-group">
-            <label for="password2">비밀번호 확인 *</label>
-            <input type="password" id="password2" name="password2"
-                   placeholder="비밀번호를 다시 입력하세요" required>
-          </div>
-        </fieldset>
-
-        <!-- 개인 정보 -->
-        <fieldset>
-          <legend>개인 정보</legend>
-
-          <div class="form-group">
-            <label for="name">이름 *</label>
-            <input type="text" id="name" name="name"
-                   placeholder="실명을 입력하세요" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">이메일 *</label>
-            <input type="email" id="email" name="email"
-                   placeholder="example@email.com" required>
-          </div>
-
-          <div class="form-group">
-            <label for="tel">전화번호</label>
-            <input type="tel" id="tel" name="tel"
-                   placeholder="010-0000-0000"
-                   pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
-          </div>
-
-          <div class="form-group">
-            <label for="birthdate">생년월일</label>
-            <input type="date" id="birthdate" name="birthdate">
-          </div>
-
-          <div class="form-group">
-            <label>성별</label>
-            <div class="radio-group">
-              <label><input type="radio" name="gender" value="male"> 남성</label>
-              <label><input type="radio" name="gender" value="female"> 여성</label>
-              <label><input type="radio" name="gender" value="other"> 기타</label>
-            </div>
-          </div>
-        </fieldset>
-
-        <!-- 추가 정보 -->
-        <fieldset>
-          <legend>추가 정보</legend>
-
-          <div class="form-group">
-            <label for="major">전공 / 직종</label>
-            <select id="major" name="major">
-              <option value="">-- 선택하세요 --</option>
-              <option value="cs">컴퓨터공학</option>
-              <option value="sw">소프트웨어학</option>
-              <option value="ai">인공지능</option>
-              <option value="design">디자인</option>
-              <option value="business">경영</option>
-              <option value="other">기타</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="introduce">자기소개</label>
-            <textarea id="introduce" name="introduce"
-                      rows="4" placeholder="간단한 자기소개를 입력해주세요."></textarea>
-          </div>
-
-          <div class="form-group">
-            <label>관심 분야 (중복 선택 가능)</label>
-            <div class="check-group">
-              <label><input type="checkbox" name="interest" value="web"> 웹개발</label>
-              <label><input type="checkbox" name="interest" value="app"> 앱개발</label>
-              <label><input type="checkbox" name="interest" value="ai"> AI/ML</label>
-              <label><input type="checkbox" name="interest" value="data"> 데이터분석</label>
-              <label><input type="checkbox" name="interest" value="security"> 보안</label>
-              <label><input type="checkbox" name="interest" value="game"> 게임개발</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="website">개인 웹사이트 / GitHub</label>
-            <input type="text" id="website" name="website"
-                   placeholder="https://github.com/username">
-          </div>
-        </fieldset>
-
-        <!-- 약관 동의 -->
-        <fieldset>
-          <legend>약관 동의</legend>
-
-          <div class="form-group">
-            <div class="check-group" style="flex-direction:column; gap:0.75rem;">
-              <label>
-                <input type="checkbox" name="agree_terms" required>
-                [필수] 이용약관에 동의합니다.
-              </label>
-              <label>
-                <input type="checkbox" name="agree_privacy" required>
-                [필수] 개인정보 수집·이용에 동의합니다.
-              </label>
-              <label>
-                <input type="checkbox" name="agree_marketing">
-                [선택] 마케팅 정보 수신에 동의합니다.
-              </label>
-            </div>
-          </div>
-        </fieldset>
-
-        <!-- 버튼 -->
-        <input type="submit" value="회원가입 완료">
-        <input type="reset" value="입력 초기화">
-
-      </form>
-    </div>
-
-    <!-- 완료 메시지 (숨김) -->
-    <div id="success-msg" style="display:none;" class="section-box" style="text-align:center;">
-      <h3 style="color:#16a34a;">✅ 회원가입이 완료되었습니다!</h3>
-      <p style="color:#64748b; margin-top:0.5rem;">환영합니다. HCJDemo에 오신 것을 환영합니다.</p>
-      <a href="index.html" class="btn" style="display:inline-block; margin-top:1rem;">홈으로 돌아가기</a>
-    </div>
-
-    <!-- 폼 태그 속성 정리 -->
-    <div class="section-box">
-      <h3>form 주요 속성 & input type 정리</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>input type</th>
-            <th>설명</th>
-            <th>예시</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><code>text</code></td><td>한 줄 텍스트 입력</td><td>아이디, 이름</td></tr>
-          <tr><td><code>password</code></td><td>비밀번호 (가려짐)</td><td>비밀번호</td></tr>
-          <tr><td><code>email</code></td><td>이메일 형식 검증</td><td>이메일</td></tr>
-          <tr><td><code>tel</code></td><td>전화번호</td><td>전화번호</td></tr>
-          <tr><td><code>date</code></td><td>날짜 선택</td><td>생년월일</td></tr>
-          <tr><td><code>radio</code></td><td>단일 선택</td><td>성별</td></tr>
-          <tr><td><code>checkbox</code></td><td>다중 선택</td><td>관심 분야</td></tr>
-          <tr><td><code>submit</code></td><td>폼 제출 버튼</td><td>회원가입 완료</td></tr>
-          <tr><td><code>reset</code></td><td>입력 초기화 버튼</td><td>입력 초기화</td></tr>
-          <tr><td><code>select</code></td><td>드롭다운 선택</td><td>전공/직종</td></tr>
-          <tr><td><code>textarea</code></td><td>여러 줄 텍스트</td><td>자기소개</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
-  <footer>
-    <p>&copy; 2025 HCJDemo. W3Schools 예제 기반 학습 프로젝트.</p>
-  </footer>
-
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      const pw = document.getElementById('password').value;
-      const pw2 = document.getElementById('password2').value;
-      if (pw !== pw2) {
-        alert('비밀번호가 일치하지 않습니다.');
-        return;
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 - 웹프로그래밍 데모</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .form-box {
+        max-width: 500px;
+        margin: 20px 0;
+        padding: 24px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fafafa;
       }
-      document.querySelector('form').style.display = 'none';
-      document.getElementById('success-msg').style.display = 'block';
-      document.getElementById('success-msg').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+      .form-group {
+        margin-bottom: 16px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      .form-group input[type="radio"],
+      .form-group input[type="checkbox"] {
+        width: auto;
+        margin-right: 6px;
+      }
+      .submit-btn {
+        padding: 10px 30px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .submit-btn:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/list">목록</a></li>
+          <li><a href="/timetable">시간표</a></li>
+          <li><a href="/media">미디어</a></li>
+          <li><a href="/register">회원가입</a></li>
+        </ul>
+      </div>
+    </nav>
 
-</body>
+    <section class="main">
+      <div class="container">
+        <h1>사용자 등록 (Register)</h1>
+        <p>아래 양식을 작성하여 회원가입을 진행하세요.</p>
+        <hr />
+
+        <div class="form-box">
+          <form action="#" method="post">
+
+            <div class="form-group">
+              <label for="username">아이디</label>
+              <input type="text" id="username" name="username" placeholder="아이디를 입력하세요" required />
+            </div>
+
+            <div class="form-group">
+              <label for="password">비밀번호</label>
+              <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">이메일</label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="birth">생년월일</label>
+              <input type="date" id="birth" name="birth" />
+            </div>
+
+            <div class="form-group">
+              <label>성별</label><br />
+              <input type="radio" name="gender" value="male" id="male" />
+              <label for="male" style="display:inline; font-weight:normal;">남성</label>
+              &nbsp;
+              <input type="radio" name="gender" value="female" id="female" />
+              <label for="female" style="display:inline; font-weight:normal;">여성</label>
+            </div>
+
+            <div class="form-group">
+              <label for="major">전공</label>
+              <select id="major" name="major">
+                <option value="">-- 선택하세요 --</option>
+                <option value="cs">컴퓨터공학</option>
+                <option value="sw">소프트웨어학</option>
+                <option value="sec">정보보안학</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>관심 분야 (중복 선택 가능)</label><br />
+              <input type="checkbox" name="interest" value="web" id="web" />
+              <label for="web" style="display:inline; font-weight:normal;">웹 개발</label>
+              &nbsp;
+              <input type="checkbox" name="interest" value="sec" id="sec" />
+              <label for="sec" style="display:inline; font-weight:normal;">보안</label>
+              &nbsp;
+              <input type="checkbox" name="interest" value="ai" id="ai" />
+              <label for="ai" style="display:inline; font-weight:normal;">인공지능</label>
+            </div>
+
+            <div class="form-group">
+              <label for="intro">자기소개</label>
+              <textarea id="intro" name="intro" rows="3" placeholder="간단한 자기소개를 입력하세요"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">가입하기</button>
+            &nbsp;
+            <button type="reset" class="submit-btn" style="background-color:#aaa;">초기화</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

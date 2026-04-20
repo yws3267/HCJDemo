@@ -1,69 +1,66 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HCJDemo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- 헤더 / 네비게이션 -->
-  <header>
-    <div class="logo">HCJDemo</div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="list.html">List</a></li>
-        <li><a href="timetable.html">시간표</a></li>
-        <li><a href="media.html">미디어</a></li>
-        <li><a href="register.html">회원가입</a></li>
-      </ul>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹프로그래밍 데모</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/list">목록</a></li>
+          <li><a href="/timetable">시간표</a></li>
+          <li><a href="/media">미디어</a></li>
+          <li><a href="/register">회원가입</a></li>
+        </ul>
+      </div>
     </nav>
-  </header>
 
-  <!-- 히어로 섹션 -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to <span>HCJDemo</span></h1>
-      <p>HTML · CSS · JavaScript 학습 데모 사이트입니다.<br>
-         W3Schools 예제 기반으로 제작되었습니다.</p>
-      <a href="list.html" class="btn">시작하기 →</a>
-    </div>
-  </section>
+    <!--메인 섹션-->
+    <section class="main">
+      <div class="container">
+        <h1>웹프로그래밍. Web Programming.</h1>
+        <h3>
+          웹 개발자를 위한 온라인 매뉴얼:
+          <a href="https://www.w3schools.com/">W3Schools: 웹프로그래밍 매뉴얼</a>
+        </h3>
+        <p>
+          웹프로그래밍의 3가지 요소:
+          <a href="https://www.w3schools.com/html/default.asp">HTML5</a> |
+          <a href="https://www.w3schools.com/css/default.asp">CSS3</a> |
+          <a href="https://www.w3schools.com/js/default.asp">Javascript</a>
+        </p>
+        <p>현재시간: <span id="time"></span></p>
+        <hr />
+        <p>
+          배경색 바꾸기:
+          <button onclick="pink()">Pink</button>
+          <button onclick="lightblue()">Lightblue</button>
+          <button onclick="yellow()">Yellow</button>
+          <button onclick="reset()">Reset</button>
+        </p>
+        <p>
+          배워봅시다:
+          <button onmouseover="showhtml()" onmouseout="hide()">HTML5</button>
+          <button onmouseover="showcss()" onmouseout="hide()">CSS3</button>
+          <button onmouseover="showjs()" onmouseout="hide()">Javascript</button>
+        </p>
+        <hr />
+        <br />
+        <div>
+          <img id="fig" height="200px" />
+          <p id="desc"></p>
+        </div>
+      </div>
+    </section>
 
-  <!-- 메뉴 카드 섹션 -->
-  <section class="cards">
-    <div class="card">
-      <div class="card-icon">📋</div>
-      <h3>List 태그</h3>
-      <p>순서 있는 목록(ol), 순서 없는 목록(ul), 설명 목록(dl)을 활용한 페이지입니다.</p>
-      <a href="list.html" class="card-link">보기 →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">📅</div>
-      <h3>강의 시간표</h3>
-      <p>table 태그를 활용하여 주간 강의 시간표를 만든 페이지입니다.</p>
-      <a href="timetable.html" class="card-link">보기 →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">🎵</div>
-      <h3>미디어</h3>
-      <p>audio, video 태그를 활용하여 음악과 동영상을 삽입한 페이지입니다.</p>
-      <a href="media.html" class="card-link">보기 →</a>
-    </div>
-    <div class="card">
-      <div class="card-icon">📝</div>
-      <h3>회원가입</h3>
-      <p>입력 양식(form)을 활용하여 사용자 등록 페이지를 만든 예제입니다.</p>
-      <a href="register.html" class="card-link">보기 →</a>
-    </div>
-  </section>
-
-  <!-- 푸터 -->
-  <footer>
-    <p>&copy; 2025 HCJDemo. W3Schools 예제 기반 학습 프로젝트.</p>
-  </footer>
-
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
